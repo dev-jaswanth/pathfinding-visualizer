@@ -1,7 +1,7 @@
 Pathfinding Visualizer
 Welcome to the Pathfinding Visualizer! This is a React project designed to help you understand some of the most fundamental pathfinding algorithms. Dive in to visualize how algorithms like DFS, BFS, A* Search, and Dijkstra find the shortest path and traverse through a maze.
 
-Algorithms: 
+Algorithms:
 
  Dijkstra: 
  Dijkstra's algorithm is a weighted,uninformed search algorithm. It methodically explores all possible routes, ensuring that it always discovers the most 
