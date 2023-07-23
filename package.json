@@ -1,7 +1,7 @@
 {
   "name": "pathfinding",
   "version": "0.1.0",
-  "homepage": "http://garethwilliams90.github.io/pathfinding",
+  "homepage": "http://dev-jaswanth.github.io/pathfinding-visualizerg",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

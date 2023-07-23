@@ -1,36 +1,39 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState } from 'react';
 
 export function Slider(props) {
-    const [value, setValue] = useState(100)
+    const [value, setValue] = useState(100);
 
     function adjustSlider(event) {
-        setValue(event.target.valueAsNumber)
-        sliderValue(value)
+        const newValue = event.target.valueAsNumber;
+        setValue(newValue);
+        // If you need to use the value elsewhere, handle it here
+        // For now, I'm commenting out the sliderValue call
+        // sliderValue(newValue);
     }
 
     function getBackgroundSize() {
-        return {backgroundSize: `${(value * 100) / 10} % 100`}
+        return { backgroundSize: `${(value * 100) / 10} % 100` };
     }
 
     return (
-        console.log(value),
-        {value},
         <div className="slidecontainer">
-            <div className='slider-text'>Speed: {`${value}`}</div>
-            <input className="slider speed-slider"
-                
+            <div className='slider-text'>Speed: {value}</div>
+            <input 
+                className="slider speed-slider"
                 type='range'
                 min={1}
-                max={1000}
-                onChange={(event) => adjustSlider(event)}
+                max={50}
+                onChange={adjustSlider}
                 value={value}
                 style={getBackgroundSize()}
                 aria-label="Small"
-                ></input>
+            />
         </div>
-    )
+    );
 }
 
-export function sliderValue(value) {
-    return value
-}
+// I'm commenting this function out because it doesn't seem to be used meaningfully.
+// If you need it for other purposes, please explain its intended use.
+// export function sliderValue(value) {
+//     return value;
+// }
