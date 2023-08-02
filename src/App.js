@@ -42,9 +42,9 @@ export default function App() {
                 
                 <div className='title'>
                     <div className="pathfinding-vis"> <bold>PATHFINDING VISUALIZER</bold> </div>
-                    {/* <div className='by-gareth'>Code Written By Gareth Williams, 2022</div> */}
+                    
                 </div>
-                {/* <button className="theme" onClick={toggleTheme}>Toggle Theme</button> */}
+               
                 <div className="slidecontainer">                 
                     <div className='slider-text'>{`${sliderValue} ms`}</div>
                     <input className="slider speed-slider"   
