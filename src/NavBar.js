@@ -64,13 +64,7 @@ export default function NavBar(props) {
                     >
                         Dijkstra's
                     </button>
-                    {/* <button
-                        className='algo-button button dijkstra'
-                        onClick={props.runDijkstraDirect}
-                        disabled={props.algoOn || props.diagOn}
-                    >
-                        Biased Dijkstra
-                    </button> */}
+                    
                     <button
                         className='algo-button button astar'
                         onClick={props.runAStar}
