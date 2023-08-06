@@ -3,7 +3,6 @@ import Visualiser from './Visualiser'
 import SocialIcons from './socialIcons'
 import Instructions from './instructions'
 
-
 export default function App() {
     const [sliderValue, setSliderValue] = useState(50)
     const [theme, setTheme] = useState('dark')
@@ -13,14 +12,8 @@ export default function App() {
         setInstructions(prevState => !prevState)
     }
 
-    function toggleTheme() {
-        setTheme(theme === 'dark' ? 'light' : 'dark')
-        console.log(theme)
-    }
-
     function adjustSlider(event) {
-        setSliderValue(event.target.valueAsNumber)
-        sliderValue(sliderValue)
+        setSliderValue(event.target.valueAsNumber);
     }
 
     function getBackgroundSize() {
@@ -31,6 +24,7 @@ export default function App() {
         <div>
             <Instructions
                     instructions={instructions}
+                    toggleInstructions={toggleInstructions}
                 />
             <div className='top-bar'>
                 <SocialIcons />
@@ -42,7 +36,6 @@ export default function App() {
                 
                 <div className='title'>
                     <div className="pathfinding-vis"> <bold>PATHFINDING VISUALIZER</bold> </div>
-                    
                 </div>
                
                 <div className="slidecontainer">                 
