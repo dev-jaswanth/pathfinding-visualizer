@@ -67,7 +67,7 @@
 .button {
   opacity: 0.9;
   margin: 0.5vw;
-  font-family:sans-serif;
+  font-family: sans-serif;
   width: 8vw;
   height: 5.5vh;
   background-color: #ffffff;
@@ -78,10 +78,32 @@
 }
 
 .button:hover {
-    opacity: 1;
-    cursor: pointer;
-    transform: scale(1.08);
-    box-shadow: 0 0.2rem 0.2rem 0rem rgba(0,0,0,0.3);
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.08);
+  box-shadow: 0 0.2rem 0.2rem 0rem rgba(0, 0, 0, 0.3);
+}
+.inst-cancel {
+  background-color: #f5f5f7;
+  /* light gray background */
+  color: #1d1d1f;
+  /* dark text color */
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+  /* smooth transition for hover effect */
+}
+
+.inst-cancel:hover {
+  background-color: #1d1d1f;
+  /* dark background on hover */
+  color: #f5f5f7;
+  /* light text on hover */
 }
 
 .button:disabled {
@@ -89,8 +111,8 @@
 }
 
 .button:active {
-    transform: translateY(0.1rem);
- }
+  transform: translateY(0.1rem);
+}
 
  .slidecontainer {
   display: flex;
@@ -202,14 +224,14 @@
 }
 
 .instruct-box {
-  font-family:  'Roboto';
+  font-family: 'Roboto';
   z-index: 10;
   position: absolute;
   display: flex;
   top: 20%;
   left: 10%;
-  border: 0.2rem solid rgb(0, 0, 0);
-  border-radius: 1rem;
+  /* border: 0.2rem solid rgb(0, 0, 0); */
+  /* border-radius: 1rem; */
   width: 80vw;
   height: 70vh;
   align-items: center;
@@ -217,21 +239,38 @@
   color: white;
   text-align: center;
   background-color: #fefefe;
+  box-sizing: border-box;
 }
 
 .instruct-inner-box {
   font-size: 2.4vh;
   position: relative;
   display: block;
-  padding: 1vh;
+  /* padding: 1vh;
   margin: 2vw;
-  border-radius: 1rem; 
+  border-radius: 1rem; */
   background-color: #ffffff;
   color: black;
-  box-shadow: 1vw 1vh rgba(255, 255, 255, 0.5);
+  /* box-shadow: 1vw 1vh rgba(255, 255, 255, 0.5);*/
+  /* box-sizing: border-box; */
+}
 
-  width: 100%;
-  height: 90%;
+@media (max-width: 768px) {
+  .instruct-box {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+  }
+
+  .instruct-inner-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+  }
 }
 
 .img {
