@@ -298,6 +298,7 @@ export default function Visualiser(props) {
         clearPaths()
         setTimerOn(true)
         setAlgoOn(true)
+        // setAStarOn(true)
         // Wait until dijkstra returns a value before going on to next line
         const {visitedNumber, nodesInVisitedOrder}  = await dijkstra(startNode, endNode, nodes, props.sliderValue, diagOn)
         const {dijkPath} = await shortestPath(endNode, props.sliderValue)
@@ -331,6 +332,7 @@ export default function Visualiser(props) {
         setNodesVisited(nodesVisited)
         setAStarOn(false)
         setTimerOn(false)
+        setAlgoOn(false)
     }
 
     async function runDepthFirst() {
